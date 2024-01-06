@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Sellify.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Sellify.Application": "1.0.0"
+        },
+        "runtime": {
+          "Sellify.Infrastructure.dll": {}
+        }
+      },
+      "Sellify.Application/1.0.0": {
+        "dependencies": {
+          "Sellify.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Sellify.Application.dll": {}
+        }
+      },
+      "Sellify.Domain/1.0.0": {
+        "runtime": {
+          "Sellify.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Sellify.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Sellify.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Sellify.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,17 @@
+using System.ComponentModel.DataAnnotations.Schema;
+using Sellify.Domain.Common;
+
+namespace Sellify.Domain;
+
+public class Review :BaseDomainModel{
+
+    [Column(TypeName ="NVARCHAR(100)")]
+    public string? Nombre {get; set; }
+
+    public int Rating {get; set; }
+
+    [Column(TypeName ="NVARCHAR(4000)")]
+    public string? Comentarios {get; set; }
+
+    public int ProductId {get; set; }
+}
