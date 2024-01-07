@@ -9,3 +9,4 @@ C:\Users\USER\Desktop\Sell-iFy\Backend\src\Core\Sellify.Domain\obj\Debug\net7.0\
 C:\Users\USER\Desktop\Sell-iFy\Backend\src\Core\Sellify.Domain\obj\Debug\net7.0\refint\Sellify.Domain.dll
 C:\Users\USER\Desktop\Sell-iFy\Backend\src\Core\Sellify.Domain\obj\Debug\net7.0\Sellify.Domain.pdb
 C:\Users\USER\Desktop\Sell-iFy\Backend\src\Core\Sellify.Domain\obj\Debug\net7.0\ref\Sellify.Domain.dll
+C:\Users\USER\Desktop\Sell-iFy\Backend\src\Core\Sellify.Domain\obj\Debug\net7.0\Sellify.Domain.csproj.AssemblyReference.cache
