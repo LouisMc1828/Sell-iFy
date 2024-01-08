@@ -13,3 +13,5 @@ C:\Users\USER\Desktop\Sell-iFy\Backend\src\Core\Sellify.Application\obj\Debug\ne
 C:\Users\USER\Desktop\Sell-iFy\Backend\src\Core\Sellify.Application\obj\Debug\net7.0\refint\Sellify.Application.dll
 C:\Users\USER\Desktop\Sell-iFy\Backend\src\Core\Sellify.Application\obj\Debug\net7.0\Sellify.Application.pdb
 C:\Users\USER\Desktop\Sell-iFy\Backend\src\Core\Sellify.Application\obj\Debug\net7.0\ref\Sellify.Application.dll
+C:\Users\USER\Desktop\Sell-iFy\Backend\src\Core\Sellify.Application\bin\Debug\net7.0\Sellify.Application.runtimeconfig.json
+C:\Users\USER\Desktop\Sell-iFy\Backend\src\Core\Sellify.Application\obj\Debug\net7.0\Sellify.Application.genruntimeconfig.cache
