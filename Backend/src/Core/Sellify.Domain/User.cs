@@ -12,5 +12,5 @@ public class Usuario : IdentityUser {
 
     public string? AvatarUrl { get; set; }
 
-    public bool IsActive { get; set; }
+    public bool IsActive { get; set; } = true;
 }

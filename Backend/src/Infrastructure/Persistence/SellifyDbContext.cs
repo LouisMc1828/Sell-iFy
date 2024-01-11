@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Sellify.Domain;
+using Sellify.Domain.Common;
 
 namespace Sellify.Infrastructure.Persistence;
 
@@ -10,6 +11,26 @@ public class SellifyDbContext : IdentityDbContext<Usuario>{
 
     public SellifyDbContext(DbContextOptions<SellifyDbContext> options) : base(options)
     {}
+
+    public override Task<int> SaveChangesAsync(CancellationToken cancellationToken=default)
+    {
+        var userName = "system";
+        foreach (var entry in ChangeTracker.Entries<BaseDomainModel>())
+        {
+            switch (entry.State)
+            {
+                case EntityState.Added:
+                    entry.Entity.CreateDate= DateTime.Now;
+                    entry.Entity.CreateBy = userName;
+                break;
+                case EntityState.Modified:
+                    entry.Entity.LastModifiedDate= DateTime.Now;
+                    entry.Entity.LastModifiedBy = userName;
+                break;
+            }
+        }
+        return base.SaveChangesAsync(cancellationToken);
+    }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

@@ -3,7 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Sellify.Application.Persistence;
 using Sellify.Infrastructure.Persistence;
 
-namespace Sellify.Infrastructure.Repositories;
+
+
+namespace Sellify.Infrastructure.Persistence.Repositories;
 
 public class RepositoryBase<T> : IAsyncRepository<T> where T : class
 {
@@ -54,12 +56,14 @@ public class RepositoryBase<T> : IAsyncRepository<T> where T : class
         return await _context.Set<T>().ToListAsync();
     }
 
-    public async Task<IReadOnlyList<T>> GetAsync(Expression<Func<T, bool>> predicate)
+    public async Task<IReadOnlyList<T>> GetAsync
+    (Expression<Func<T, bool>> predicate)
     {
         return await _context.Set<T>().Where(predicate).ToListAsync();
     }
 
-    public async Task<IReadOnlyList<T>> GetAsync(Expression<Func<T, bool>>? predicate, Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy, string? includeString, bool disableTracking = true)
+    public async Task<IReadOnlyList<T>> GetAsync
+    (Expression<Func<T, bool>>? predicate, Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy, string? includeString, bool disableTracking = true)
     {
         IQueryable<T> query = _context.Set<T>();
         if (disableTracking) query = query.AsNoTracking();

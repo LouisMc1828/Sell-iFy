@@ -15,3 +15,5 @@ C:\Users\USER\Desktop\Sell-iFy\Backend\src\Infrastructure\obj\Debug\net7.0\Selli
 C:\Users\USER\Desktop\Sell-iFy\Backend\src\Infrastructure\obj\Debug\net7.0\refint\Sellify.Infrastructure.dll
 C:\Users\USER\Desktop\Sell-iFy\Backend\src\Infrastructure\obj\Debug\net7.0\Sellify.Infrastructure.pdb
 C:\Users\USER\Desktop\Sell-iFy\Backend\src\Infrastructure\obj\Debug\net7.0\ref\Sellify.Infrastructure.dll
+C:\Users\USER\Desktop\Sell-iFy\Backend\src\Infrastructure\bin\Debug\net7.0\Sellify.Infrastructure.runtimeconfig.json
+C:\Users\USER\Desktop\Sell-iFy\Backend\src\Infrastructure\obj\Debug\net7.0\Sellify.Infrastructure.genruntimeconfig.cache
