@@ -197,6 +197,10 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "Postmark": {
+              "target": "Package",
+              "version": "[4.7.10, )"
+            },
             "Stripe.net": {
               "target": "Package",
               "version": "[41.2.0, )"
@@ -364,6 +368,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.2, )"
+            },
+            "Postmark": {
+              "target": "Package",
+              "version": "[4.7.10, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",

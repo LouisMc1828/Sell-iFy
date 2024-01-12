@@ -116,6 +116,10 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "Postmark": {
+              "target": "Package",
+              "version": "[4.7.10, )"
+            },
             "Stripe.net": {
               "target": "Package",
               "version": "[41.2.0, )"

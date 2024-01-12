@@ -98,3 +98,4 @@ C:\Users\USER\Desktop\Sell-iFy\Backend\src\Api\bin\Debug\net7.0\Microsoft.Entity
 C:\Users\USER\Desktop\Sell-iFy\Backend\src\Api\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\USER\Desktop\Sell-iFy\Backend\src\Api\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\Users\USER\Desktop\Sell-iFy\Backend\src\Api\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\USER\Desktop\Sell-iFy\Backend\src\Api\bin\Debug\net7.0\Postmark.dll
