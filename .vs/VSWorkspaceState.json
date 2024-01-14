@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Backend",
+    "\\Backend\\src",
+    "\\Backend\\src\\Core",
+    "\\Backend\\src\\Core\\Sellify.Application",
+    "\\Backend\\src\\Core\\Sellify.Application\\Features",
+    "\\Backend\\src\\Core\\Sellify.Application\\Features\\Products",
+    "\\Backend\\src\\Core\\Sellify.Application\\Features\\Products\\Queries",
+    "\\Backend\\src\\Core\\Sellify.Application\\Features\\Products\\Queries\\GetProductList",
+    "\\Backend\\src\\Core\\Sellify.Domain"
+  ],
+  "SelectedNode": "\\Backend\\src\\Api\\Program.cs",
+  "PreviewInSolutionExplorer": false
+}

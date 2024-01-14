@@ -1,10 +1,28 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Sellify.Domain.Configuration;
 
+
 public class OrderConfiguration : IEntityTypeConfiguration<Order>
+{
+    public void Configure(EntityTypeBuilder<Order> builder)
+    {
+        builder.OwnsOne(o => o.OrderAddress, x => {
+            x.WithOwner();
+        });
+
+        builder.HasMany(o => o.OrderItems).WithOne()
+        .OnDelete(DeleteBehavior.Cascade);
+
+        builder.Property(s => s.Status).HasConversion(
+            o => o.ToString(),
+            o => (OrderStatus)Enum.Parse(typeof(OrderStatus), o)
+        );
+    }
+}
+
+/*public class OrderConfiguration : IEntityTypeConfiguration<Order>
 {
     public void Configure(EntityTypeBuilder<Order> builder)
     {
@@ -19,7 +37,9 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
 
         builder.Property(s => s.Status).HasConversion(
             o => o.ToString(),
-            o => (OrderStatus)Enum.Parse(typeof(OrderStatus),o)
+            o => (OrderStatus)Enum.Parse(typeof(OrderStatus), o)
         );
     }
 }
+
+Cap 37/Seccion 4(Fin) - Services API*/

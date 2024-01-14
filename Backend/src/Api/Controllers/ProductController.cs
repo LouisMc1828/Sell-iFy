@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Sellify.Application.Features.Products.Queries.GetProductList;
 using Sellify.Domain;
@@ -8,19 +9,19 @@ namespace Sellify.Api.Controllers;
 
 [ApiController]
 [Route("api/v1/[controller]")]
-public class ProducController : ControllerBase
+public class ProductController : ControllerBase
 {
     private IMediator _mediator;
 
-    public ProducController(IMediator mediator)
+    public ProductController(IMediator mediator)
     {
         _mediator = mediator;
     }
 
-
+    [AllowAnonymous]
     [HttpGet("list", Name = "GetProductList")]
-    [ProducesResponseType(typeof(IEnumerable<Product>), (int)HttpStatusCode.OK)]
-    public async Task<ActionResult<IEnumerable<Product>>> GetProductList()
+    [ProducesResponseType(typeof(IReadOnlyList<Product>), (int)HttpStatusCode.OK)]
+    public async Task<ActionResult<IReadOnlyList<Product>>> GetProductList()
     {
         var query = new GetProductListQuery();
         var products = await _mediator.Send(query);
