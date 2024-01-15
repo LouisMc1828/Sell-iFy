@@ -42,4 +42,9 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
     }
 }
 
-Cap 37/Seccion 4(Fin) - Services API*/
+Cap 37/Seccion 4(Fin) - Services API
+
+C:\Users\USER\Desktop\Sell-iFy\Backend\src\Core\Sellify.Domain\Configuration\OrderConfiguration.cs(20,63): warning CS8604:  
+Posible argumento de referencia nulo para el parámetro "value" en "object Enum.Parse(Type enumType, string value)". [C:\Use 
+rs\USER\Desktop\Sell-iFy\Backend\src\Core\Sellify.Domain\Sellify.Domain.csproj]
+*/

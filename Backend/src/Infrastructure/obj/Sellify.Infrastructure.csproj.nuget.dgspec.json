@@ -4,14 +4,14 @@
     "C:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Infrastructure\\Sellify.Infrastructure.csproj": {}
   },
   "projects": {
-    "c:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Core\\Sellify.Application\\Sellify.Application.csproj": {
+    "C:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Core\\Sellify.Application\\Sellify.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Core\\Sellify.Application\\Sellify.Application.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Core\\Sellify.Application\\Sellify.Application.csproj",
         "projectName": "Sellify.Application",
-        "projectPath": "c:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Core\\Sellify.Application\\Sellify.Application.csproj",
+        "projectPath": "C:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Core\\Sellify.Application\\Sellify.Application.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Core\\Sellify.Application\\obj\\",
+        "outputPath": "C:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Core\\Sellify.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -246,8 +246,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "c:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Core\\Sellify.Application\\Sellify.Application.csproj": {
-                "projectPath": "c:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Core\\Sellify.Application\\Sellify.Application.csproj"
+              "C:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Core\\Sellify.Application\\Sellify.Application.csproj": {
+                "projectPath": "C:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Core\\Sellify.Application\\Sellify.Application.csproj"
               }
             }
           }

@@ -7662,8 +7662,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "c:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Core\\Sellify.Application\\Sellify.Application.csproj": {
-              "projectPath": "c:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Core\\Sellify.Application\\Sellify.Application.csproj"
+            "C:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Core\\Sellify.Application\\Sellify.Application.csproj": {
+              "projectPath": "C:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Core\\Sellify.Application\\Sellify.Application.csproj"
             }
           }
         }
