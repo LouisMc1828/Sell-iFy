@@ -27,7 +27,7 @@ public class GetProductListQueryHandler : IRequestHandler<GetProductListQuery, I
 
         var products = await _unitOfWork.Repository<Product>().GetAsync(
             null,
-            x=>x.OrderBy(y=>y.Nombre),
+            x => x.OrderBy(y => y.Nombre),
             includes,
             true
         );

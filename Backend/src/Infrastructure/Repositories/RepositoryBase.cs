@@ -147,12 +147,4 @@ public class RepositoryBase<T> : IAsyncRepository<T> where T : class
     }
 
 
-
-
-
-
-
-
-
 }
-

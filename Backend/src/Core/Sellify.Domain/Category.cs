@@ -6,8 +6,8 @@ namespace Sellify.Domain;
 
 public class Category : BaseDomainModel{
 
-    [Column(TypeName ="NVARCHAR(255)")]
-    public string? Nombre {get; set;}
+    [Column(TypeName = "NVARCHAR(255)")]
+    public string? Nombre { get; set; }
 
-    public virtual ICollection<Product>? Products {get; set;}
+    public virtual ICollection<Product>? Products { get; set; }
 }

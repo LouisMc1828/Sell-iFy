@@ -4,13 +4,13 @@ using Sellify.Domain.Common;
 namespace Sellify.Domain;
 
 public enum OrderStatus {
-    [EnumMember(Value ="Pendiente")]
+    [EnumMember(Value = "Pendiente")]
     Pending,
-    [EnumMember(Value ="Pago efectuado exitosamente")]
+    [EnumMember(Value = "Pago efectuado exitosamente")]
     Completed,
-    [EnumMember(Value ="El producto fue enviado")]
+    [EnumMember(Value = "El producto fue enviado")]
     Sent,
-    [EnumMember(Value ="Sucedió un error durante el pago")]
+    [EnumMember(Value = "Sucedió un error durante el pago")]
     Error
 
 }

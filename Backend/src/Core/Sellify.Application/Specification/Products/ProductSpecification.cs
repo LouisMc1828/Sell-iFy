@@ -5,27 +5,21 @@ namespace Sellify.Application.Specification.Products;
 public class ProductSpecification : BaseSpecification<Product>
 {
     public ProductSpecification(ProductSpecificationParams productParams)
-    : base
-    (
+    :base(
         x =>
-        (
-            string.IsNullOrEmpty(productParams.Search) || x.Nombre!.Contains(productParams.Search)
+        (string.IsNullOrEmpty(productParams.Search) || x.Nombre!.Contains(productParams.Search)
             || x.Descripcion!.Contains(productParams.Search)
-        )
-        &&
-        (!productParams.CategoryId.HasValue || x.CategoryId == productParams.CategoryId)
-        &&
-        (!productParams.PrecioMin.HasValue || x.Precio >= productParams.PrecioMin)
-        &&
-        (!productParams.PrecioMax.HasValue || x.Precio <= productParams.PrecioMax)
-        &&
-        (!productParams.Status.HasValue || x.Status == productParams.Status)
+        ) &&
+        (!productParams.CategoryId.HasValue || x.CategoryId == productParams.CategoryId) &&
+        (!productParams.PrecioMin.HasValue  || x.Precio >= productParams.PrecioMin) &&
+        (!productParams.PrecioMax.HasValue  || x.Precio <= productParams.PrecioMax) &&
+        (!productParams.Status.HasValue  || x.Status == productParams.Status)
     )
     {
         AddInclude(p => p.Reviews!);
         AddInclude(p => p.Images!);
 
-        ApplyPaging(productParams.PageSize*(productParams.PageIndex-1), productParams.PageSize);
+        ApplyPaging(productParams.PageSize * (productParams.PageIndex-1), productParams.PageSize);
 
         if(!string.IsNullOrEmpty(productParams.Sort))
         {
@@ -56,13 +50,11 @@ public class ProductSpecification : BaseSpecification<Product>
                     break;
 
                 default:
-                    AddOrderBy(p => p.CreateDate!);
+                    AddOrderBy(p => p.CreatedDate!);
                     break;
             }
-        }
-        else
-        {
-            AddOrderByDescending(p => p.CreateDate!);
+        }else{
+            AddOrderByDescending(p => p.CreatedDate!);
         }
     }
 

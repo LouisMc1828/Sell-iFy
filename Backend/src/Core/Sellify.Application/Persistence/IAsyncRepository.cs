@@ -46,7 +46,7 @@ public interface IAsyncRepository<T> where T : class
 
     void DeleteRange(IReadOnlyList<T> entities);
 
-    Task<T> GetByIdWithSpec(ISpecification<T> spec );
+    Task<T> GetByIdWithSpec(ISpecification<T> spec);
 
     Task<IReadOnlyList<T>> GetAllWithSpec(ISpecification<T> spec);
 

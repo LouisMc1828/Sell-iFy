@@ -14,7 +14,7 @@ public class CodeErrorResponse
     public CodeErrorResponse(int statusCode, string[]? message = null)
     {
         StatusCode = statusCode;
-        if (message is null)
+        if(message is null)
         {
             Message = new string[0];
             var text = GetDefaultMessageStatusCode(statusCode);
@@ -34,7 +34,7 @@ public class CodeErrorResponse
             401 => "Not Authorization",
             404 => "Not Found",
             500 => "Internal Server Error",
-            _=> string.Empty
+            _ => string.Empty
         };
     }
 }

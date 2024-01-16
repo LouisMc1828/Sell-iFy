@@ -11,8 +11,8 @@ public class MappingProfile : Profile
     public MappingProfile()
     {
         CreateMap<Product, ProductVm>()
-        .ForMember(m => m.CategoryNombre, x => x.MapFrom(y => y.Category!.Nombre))
-        .ForMember(p => p.NumeroReviews, x => x.MapFrom(y => y.Reviews == null ? 0 : y.Reviews.Count));
+        .ForMember(p=> p.CategoryNombre, x=> x.MapFrom(a => a.Category!.Nombre))
+        .ForMember(p => p.NumeroReviews, x => x.MapFrom(a => a.Reviews == null ? 0 : a.Reviews.Count));
 
         CreateMap<Image, ImageVm>();
         CreateMap<Review, ReviewVm>();

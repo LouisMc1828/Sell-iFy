@@ -8,13 +8,13 @@ using Sellify.Domain;
 
 namespace Sellify.Application.Features.Products.Queries.PaginationProducts;
 
-public class PaginationProducsQueryHandler : IRequestHandler<PaginationProductsQuery, PaginationVm<ProductVm>>
+public class PaginationProductsQueryHandler : IRequestHandler<PaginationProductsQuery, PaginationVm<ProductVm>>
 {
 
     private readonly IUnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
 
-    public PaginationProducsQueryHandler(IUnitOfWork unitOfWork, IMapper mapper)
+    public PaginationProductsQueryHandler(IUnitOfWork unitOfWork, IMapper mapper)
     {
         _unitOfWork = unitOfWork;
         _mapper = mapper;
@@ -43,7 +43,7 @@ public class PaginationProducsQueryHandler : IRequestHandler<PaginationProductsQ
 
         var totalProducts = await _unitOfWork.Repository<Product>().CountAsync(specCount);
 
-        var rounded = Math.Ceiling(Convert.ToDecimal(totalProducts)/Convert.ToDecimal(request.PageSize));
+        var rounded = Math.Ceiling(Convert.ToDecimal(totalProducts) / Convert.ToDecimal(request.PageSize));
 
         var totalPages = Convert.ToInt32(rounded);
 

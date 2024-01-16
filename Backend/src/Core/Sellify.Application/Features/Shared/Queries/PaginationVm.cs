@@ -8,7 +8,7 @@ public class PaginationVm<T> where T : class
 
     public int PageSize { get; set; }
 
-    public IReadOnlyList<T> ? Data { get; set; }
+    public IReadOnlyList<T>? Data { get; set; }
 
     public int PageCount { get; set; }
 

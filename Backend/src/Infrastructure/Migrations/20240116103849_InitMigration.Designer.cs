@@ -12,7 +12,7 @@ using Sellify.Infrastructure.Persistence;
 namespace Sellify.Infrastructure.Migrations
 {
     [DbContext(typeof(SellifyDbContext))]
-    [Migration("20240111055825_InitMigration")]
+    [Migration("20240116103849_InitMigration")]
     partial class InitMigration
     {
         /// <inheritdoc />
@@ -173,10 +173,10 @@ namespace Sellify.Infrastructure.Migrations
                     b.Property<string>("CodigoPostal")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CreateBy")
+                    b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("CreateDate")
+                    b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Departamento")
@@ -210,10 +210,10 @@ namespace Sellify.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("CreateBy")
+                    b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("CreateDate")
+                    b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("LastModifiedBy")
@@ -238,10 +238,10 @@ namespace Sellify.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("CreateBy")
+                    b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("CreateDate")
+                    b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Iso2")
@@ -256,6 +256,9 @@ namespace Sellify.Infrastructure.Migrations
                     b.Property<DateTime?>("LastModifiedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Countries");
@@ -269,10 +272,10 @@ namespace Sellify.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("CreateBy")
+                    b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("CreateDate")
+                    b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("LastModifiedBy")
@@ -314,10 +317,10 @@ namespace Sellify.Infrastructure.Migrations
                     b.Property<string>("CompradorUsername")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CreateBy")
+                    b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("CreateDate")
+                    b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<decimal>("Impuesto")
@@ -338,7 +341,7 @@ namespace Sellify.Infrastructure.Migrations
                     b.Property<decimal>("PrecioEnvio")
                         .HasColumnType("DECIMAL(10,2)");
 
-                    b.Property<int?>("Status")
+                    b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.Property<string>("StripeApiKey")
@@ -371,10 +374,10 @@ namespace Sellify.Infrastructure.Migrations
                     b.Property<string>("CodigoPostal")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CreateBy")
+                    b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("CreateDate")
+                    b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Departamento")
@@ -397,7 +400,7 @@ namespace Sellify.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("OrderAddress");
+                    b.ToTable("OrderAddresses");
                 });
 
             modelBuilder.Entity("Sellify.Domain.OrderItem", b =>
@@ -411,13 +414,13 @@ namespace Sellify.Infrastructure.Migrations
                     b.Property<int>("Cantidad")
                         .HasColumnType("int");
 
-                    b.Property<string>("CreateBy")
+                    b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("CreateDate")
+                    b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("ImagenURL")
+                    b.Property<string>("ImagenUrl")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastModifiedBy")
@@ -461,10 +464,10 @@ namespace Sellify.Infrastructure.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
-                    b.Property<string>("CreateBy")
+                    b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("CreateDate")
+                    b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Descripcion")
@@ -479,7 +482,7 @@ namespace Sellify.Infrastructure.Migrations
                     b.Property<string>("Nombre")
                         .HasColumnType("NVARCHAR(100)");
 
-                    b.Property<decimal?>("Precio")
+                    b.Property<decimal>("Precio")
                         .HasColumnType("DECIMAL(10,2)");
 
                     b.Property<int>("Rating")
@@ -490,6 +493,9 @@ namespace Sellify.Infrastructure.Migrations
 
                     b.Property<int>("Stock")
                         .HasColumnType("int");
+
+                    b.Property<string>("Vendedor")
+                        .HasColumnType("NVARCHAR(100)");
 
                     b.HasKey("Id");
 
@@ -506,13 +512,13 @@ namespace Sellify.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Comentarios")
+                    b.Property<string>("Comentario")
                         .HasColumnType("NVARCHAR(4000)");
 
-                    b.Property<string>("CreateBy")
+                    b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("CreateDate")
+                    b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("LastModifiedBy")
@@ -545,10 +551,10 @@ namespace Sellify.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("CreateBy")
+                    b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("CreateDate")
+                    b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("LastModifiedBy")
@@ -579,10 +585,10 @@ namespace Sellify.Infrastructure.Migrations
                     b.Property<string>("Categoria")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CreateBy")
+                    b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("CreateDate")
+                    b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Imagen")

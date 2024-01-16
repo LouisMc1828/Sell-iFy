@@ -8,8 +8,7 @@ public class SpecificationEvaluator<T> where T : class
 
     public static IQueryable<T> GetQuery(IQueryable<T> inputQuery, ISpecification<T> spec)
     {
-
-        if (spec.Criterio != null)
+        if(spec.Criterio != null)
         {
             inputQuery = inputQuery.Where(spec.Criterio);
         }
@@ -21,7 +20,7 @@ public class SpecificationEvaluator<T> where T : class
 
         if (spec.OrderByDescending != null)
         {
-            inputQuery = inputQuery.OrderByDescending(spec.OrderByDescending);
+            inputQuery = inputQuery.OrderBy(spec.OrderByDescending);
         }
 
         if (spec.IsPagingEnable)

@@ -4,7 +4,8 @@ using Sellify.Application.Models.Product;
 using Sellify.Domain;
 
 namespace Sellify.Application.Features.Products.Queries.Vms;
-public class ProductVm{
+public class ProductVm
+{
 
     public int Id { get; set; }
 
@@ -32,7 +33,8 @@ public class ProductVm{
 
     public string StatusLabel {
         get {
-            switch(Status){
+            switch(Status)
+            {
                 case ProductStatus.Activo: {
                     return ProductStatusLabel.ACTIVO;
                 }

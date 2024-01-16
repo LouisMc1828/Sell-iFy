@@ -36,7 +36,7 @@ public class ManageImageService : IManageImageService
 
         if (uploadResult.StatusCode == HttpStatusCode.OK)
         {
-            return new ImageResponse{
+            return new ImageResponse {
                 PublicId = uploadResult.PublicId,
                 Url = uploadResult.Url.ToString()
             };

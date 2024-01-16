@@ -3,9 +3,9 @@ using Sellify.Domain.Common;
 
 namespace Sellify.Domain;
 
-public class Image : BaseDomainModel{
+public class Image : BaseDomainModel {
 
-    [Column(TypeName ="NVARCHAR(4000)")]
+    [Column(TypeName = "NVARCHAR(4000)")]
     public string? Url {get;set;}
 
     public int ProductId {get;set;}

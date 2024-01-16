@@ -36,7 +36,7 @@ public class Order : BaseDomainModel{
     [Column(TypeName ="DECIMAL(10,2)")]
     public decimal Subtotal { get; set; }
 
-    public OrderStatus? Status { get; set; } = OrderStatus.Pending;
+    public OrderStatus Status { get; set; } = OrderStatus.Pending;
 
     [Column(TypeName ="DECIMAL(10,2)")]
     public decimal Total { get; set; }

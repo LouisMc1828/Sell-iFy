@@ -13,7 +13,9 @@ public class ExceptionMiddleware
     private readonly ILogger<ExceptionMiddleware> _logger;
 
     public ExceptionMiddleware(
-        RequestDelegate next,ILogger<ExceptionMiddleware> logger)
+        RequestDelegate next,
+        ILogger<ExceptionMiddleware> logger
+    )
     {
         _next = next;
         _logger = logger;
@@ -25,7 +27,7 @@ public class ExceptionMiddleware
         {
             await _next(context);
         }
-        catch (Exception ex)
+        catch(Exception ex)
         {
             _logger.LogError(ex, ex.Message);
             context.Response.ContentType = "application/json";
@@ -34,35 +36,33 @@ public class ExceptionMiddleware
 
             switch(ex)
             {
-                case NotFoundException notFoundException :
+                case NotFoundException notFoundException:
                     statusCode = (int)HttpStatusCode.NotFound;
                 break;
 
-                case FluentValidation.ValidationException validationException :
+                case FluentValidation.ValidationException validationException:
                     statusCode = (int)HttpStatusCode.BadRequest;
                     var errors = validationException.Errors.Select(e => e.ErrorMessage).ToArray();
                     var validationJsons = JsonConvert.SerializeObject(errors);
-                    result = JsonConvert.SerializeObject
-                    (
+                    result = JsonConvert.SerializeObject(
                         new CodeErrorException(statusCode, errors, validationJsons)
                     );
                 break;
 
-                case BadRequestException badRequestException :
+                case BadRequestException badRequestException:
                     statusCode = (int)HttpStatusCode.BadRequest;
                 break;
 
-                default :
+                default:
                     statusCode = (int)HttpStatusCode.InternalServerError;
                 break;
             }
 
-            if (string.IsNullOrEmpty(result))
+            if(string.IsNullOrEmpty(result))
             {
-                result = JsonConvert.SerializeObject
-                (
-                    new CodeErrorException(statusCode, new string[]{ex.Message}, ex.StackTrace)
-                );
+                result = JsonConvert.SerializeObject(
+                    new CodeErrorException(statusCode,
+                                            new string[]{ex.Message}, ex.StackTrace));
             }
 
             context.Response.StatusCode = statusCode;

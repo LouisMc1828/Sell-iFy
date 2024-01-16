@@ -11,11 +11,14 @@ public static class ApplicationServiceRegistration
 {
 
     public static IServiceCollection AddApplicationServices(
-        this IServiceCollection services, IConfiguration configuration
+        this IServiceCollection services,
+        IConfiguration configuration
     )
     {
 
-        var mapperConfig = new MapperConfiguration(mc => {mc.AddProfile(new MappingProfile());});
+        var mapperConfig = new MapperConfiguration(mc => {
+            mc.AddProfile(new MappingProfile());
+        });
 
         IMapper mapper = mapperConfig.CreateMapper();
         services.AddSingleton(mapper);

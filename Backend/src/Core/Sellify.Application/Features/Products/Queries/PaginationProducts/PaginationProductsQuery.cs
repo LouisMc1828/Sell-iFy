@@ -15,5 +15,5 @@ public class PaginationProductsQuery : PaginationBaseQuery, IRequest<PaginationV
 
     public int? Rating { get; set; }
 
-    public ProductStatus Status { get; set; }
+    public ProductStatus? Status { get; set; }
 }

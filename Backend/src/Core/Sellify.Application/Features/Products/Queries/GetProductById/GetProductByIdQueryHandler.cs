@@ -26,7 +26,7 @@ public class GetProductByIdQueryHandler : IRequestHandler<GetProductByIdQuery, P
         
         var includes = new List<Expression<Func<Product, object>>>();
         includes.Add(p => p.Images!);
-        includes.Add(p => p.Reviews!.OrderByDescending(x => x.CreateDate));
+        includes.Add(p => p.Reviews!.OrderByDescending(x => x.CreatedDate));
 
         var product = await _unitOfWork.Repository<Product>().GetEntityAsync(
             x => x.Id == request.ProductId,

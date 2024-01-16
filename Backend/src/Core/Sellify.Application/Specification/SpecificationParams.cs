@@ -9,7 +9,7 @@ public abstract class SpecificationParams
 
     private const int MaxPageSize = 50;
 
-    private int _pageSize = 10;
+    private int _pageSize = 3;
 
     public int PageSize
     {

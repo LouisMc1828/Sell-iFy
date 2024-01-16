@@ -6,25 +6,25 @@ using Sellify.Domain.Common;
 
 namespace Sellify.Infrastructure.Persistence;
 
-public class SellifyDbContext : IdentityDbContext<Usuario>{
+public class SellifyDbContext : IdentityDbContext<Usuario> {
 
 
     public SellifyDbContext(DbContextOptions<SellifyDbContext> options) : base(options)
     {}
 
-    public override Task<int> SaveChangesAsync(CancellationToken cancellationToken=default)
+    public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {
         var userName = "system";
         foreach (var entry in ChangeTracker.Entries<BaseDomainModel>())
         {
-            switch (entry.State)
+            switch(entry.State)
             {
                 case EntityState.Added:
-                    entry.Entity.CreateDate= DateTime.Now;
-                    entry.Entity.CreateBy = userName;
+                    entry.Entity.CreatedDate = DateTime.Now;
+                    entry.Entity.CreatedBy = userName;
                 break;
                 case EntityState.Modified:
-                    entry.Entity.LastModifiedDate= DateTime.Now;
+                    entry.Entity.LastModifiedDate = DateTime.Now;
                     entry.Entity.LastModifiedBy = userName;
                 break;
             }
@@ -42,18 +42,21 @@ public class SellifyDbContext : IdentityDbContext<Usuario>{
             .HasForeignKey(r => r.CategoryId)
             .IsRequired()
             .OnDelete(DeleteBehavior.Restrict);
+
         builder.Entity<Product>()
             .HasMany(p => p.Reviews)
             .WithOne(r => r.Product)
             .HasForeignKey(r => r.ProductId)
             .IsRequired()
             .OnDelete(DeleteBehavior.Cascade);
+
         builder.Entity<Product>()
             .HasMany(p => p.Images)
             .WithOne(r => r.Product)
             .HasForeignKey(r => r.ProductId)
             .IsRequired()
             .OnDelete(DeleteBehavior.Cascade);
+
         builder.Entity<ShoppingCar>()
             .HasMany(p => p.ShoppingCarItems)
             .WithOne(r => r.ShoppingCar)
@@ -80,5 +83,5 @@ public class SellifyDbContext : IdentityDbContext<Usuario>{
     public DbSet<ShoppingCar>? ShoppingCars { get; set; }
     public DbSet<ShoppingCarItem>? ShoppingCarItems { get; set; }
     public DbSet<Country>? Countries { get; set; }
-    public DbSet<OrderAddress>? OrderAddress { get; set;}
+    public DbSet<OrderAddress>? OrderAddresses { get; set; }
 }

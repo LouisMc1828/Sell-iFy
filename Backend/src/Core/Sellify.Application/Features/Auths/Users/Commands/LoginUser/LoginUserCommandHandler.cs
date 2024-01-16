@@ -14,7 +14,7 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, AuthRes
 {
 
     private readonly UserManager<Usuario> _userManager;
-
+    
     private readonly SignInManager<Usuario> _signInManager;
 
     private readonly RoleManager<IdentityRole> _roleManager;
@@ -41,12 +41,12 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, AuthRes
     public async Task<AuthResponse> Handle(LoginUserCommand request, CancellationToken cancellationToken)
     {
         var user = await _userManager.FindByEmailAsync(request.Email!);
-        if (user is null)
+        if(user is null)
         {
             throw new NotFoundException(nameof(Usuario), request.Email!);
         }
 
-        if (!user.IsActive)
+        if(!user.IsActive)
         {
             throw new Exception($"User {request.Email} is not active");
         }
@@ -64,7 +64,8 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, AuthRes
 
         var roles = await _userManager.GetRolesAsync(user);
 
-        var authResponse = new AuthResponse{
+        var authResponse = new AuthResponse
+        {
             Id = user.Id,
             Nombre = user.Nombre,
             Apellido = user.Apellido,
@@ -72,9 +73,11 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, AuthRes
             Email = user.Email,
             Username = user.UserName,
             Avatar = user.AvatarUrl,
-            Roles = roles,
             DireccionEnvio = _mapper.Map<AddressVm>(dirEnvio),
-            Token = _authService.CreateToken(user,roles)
+            Token = _authService.CreateToken(user, roles),
+            Roles = roles
+            
+            
         };
 
         return authResponse;

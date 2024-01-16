@@ -3,7 +3,7 @@ using Sellify.Domain.Common;
 
 namespace Sellify.Domain;
 
-public class OrderItem : BaseDomainModel{
+public class OrderItem : BaseDomainModel {
 
     public Product? Product { get; set; }
 
@@ -22,5 +22,5 @@ public class OrderItem : BaseDomainModel{
 
     public string? ProductNombre { get; set; }
 
-    public string? ImagenURL { get; set; }
+    public string? ImagenUrl { get; set; }
 }
