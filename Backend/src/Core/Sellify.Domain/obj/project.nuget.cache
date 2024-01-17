@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lRqBqsMQSd244H4ePw789mZfUzShsXh1T/qhUvpuz1LT1t++p+LIR51yYQ32E4tttGs0sw8Cx5PJufwCZajTZw==",
+  "dgSpecHash": "ArMtUott4xf0esLit2oNs9Qm5B8xj9MRHQTF9+/zqM34jygrMkd8rXZmFaHkwdSAFmnyTNit8YtrKjoJwSOE8A==",
   "success": true,
-  "projectFilePath": "c:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Core\\Sellify.Domain\\Sellify.Domain.csproj",
+  "projectFilePath": "C:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Core\\Sellify.Domain\\Sellify.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

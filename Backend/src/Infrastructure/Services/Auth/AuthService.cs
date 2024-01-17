@@ -18,8 +18,9 @@ public class AuthService : IAuthService
 
     public AuthService(IHttpContextAccessor httpContextAccessor, IOptions<JwtSettings> jwtSettings)
     {
-        _jwtSettings = jwtSettings.Value;
         _httpContextAccessor = httpContextAccessor;
+        _jwtSettings = jwtSettings.Value;
+        
     }
     public string CreateToken(Usuario user, IList<string>? roles)
     {

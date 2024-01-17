@@ -2734,8 +2734,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Microsoft.AspNetcore.Identity": "2.2.0",
-          "Microsoft.AspNetcore.Identity.EntityFrameworkCore": "7.0.0"
+          "Microsoft.AspNetCore.Identity": "2.2.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.0"
         },
         "compile": {
           "bin/placeholder/Sellify.Domain.dll": {}
@@ -7641,11 +7641,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Infrastructure\\Sellify.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Infrastructure\\Sellify.Infrastructure.csproj",
       "projectName": "Sellify.Infrastructure",
-      "projectPath": "c:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Infrastructure\\Sellify.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Infrastructure\\Sellify.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7662,8 +7662,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "c:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Core\\Sellify.Application\\Sellify.Application.csproj": {
-              "projectPath": "c:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Core\\Sellify.Application\\Sellify.Application.csproj"
+            "C:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Core\\Sellify.Application\\Sellify.Application.csproj": {
+              "projectPath": "C:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Core\\Sellify.Application\\Sellify.Application.csproj"
             }
           }
         }

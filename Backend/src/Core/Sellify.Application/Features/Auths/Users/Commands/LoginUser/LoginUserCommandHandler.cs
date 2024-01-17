@@ -76,8 +76,6 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, AuthRes
             DireccionEnvio = _mapper.Map<AddressVm>(dirEnvio),
             Token = _authService.CreateToken(user, roles),
             Roles = roles
-            
-            
         };
 
         return authResponse;

@@ -15,6 +15,7 @@ using MediatR;
 using Sellify.Application.Contracts.Infrasctructure;
 using Sellify.Infrastructure.ImageCloudinary;
 using System.Text.Json.Serialization;
+using Sellify.Api.Middlewares;
 
 
 
@@ -87,6 +88,7 @@ if (app.Environment.IsDevelopment())
 }
 
 //app.UseHttpsRedirection();
+app.UseMiddleware<ExceptionMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseCors("CorsPolicy");
