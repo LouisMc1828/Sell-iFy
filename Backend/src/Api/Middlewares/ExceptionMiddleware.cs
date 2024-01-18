@@ -42,7 +42,7 @@ public class ExceptionMiddleware
 
                 case FluentValidation.ValidationException validationException:
                     statusCode = (int)HttpStatusCode.BadRequest;
-                    var errors = validationException.Errors.Select(e => e.ErrorMessage).ToArray();
+                    var errors = validationException.Errors.Select(ers => ers.ErrorMessage).ToArray();
                     var validationJsons = JsonConvert.SerializeObject(errors);
                     result = JsonConvert.SerializeObject(
                         new CodeErrorException(statusCode, errors, validationJsons)
