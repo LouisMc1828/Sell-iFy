@@ -1,4 +1,6 @@
 using AutoMapper;
+using Sellify.Application.Features.Categories.Vms;
+using Sellify.Application.Features.Countries.Vms;
 using Sellify.Application.Features.Images.Queries.Vms;
 using Sellify.Application.Features.Products.Queries.Vms;
 using Sellify.Application.Features.Reviews.Queries.Vms;
@@ -16,5 +18,7 @@ public class MappingProfile : Profile
 
         CreateMap<Image, ImageVm>();
         CreateMap<Review, ReviewVm>();
+        CreateMap<Country, CountryVm>();
+        CreateMap<Category, CategoryVm>();
     }
 }

@@ -3,6 +3,7 @@ using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Sellify.Application.Contracts.Infrasctructure;
+using Sellify.Application.Features.Auths.Roles.Queries.GetRoles;
 using Sellify.Application.Features.Auths.Users.Commands.LoginUser;
 using Sellify.Application.Features.Auths.Users.Commands.RegisterUser;
 using Sellify.Application.Features.Auths.Users.Commands.ResetPassword;
@@ -163,5 +164,15 @@ public class UserController : ControllerBase
     {
         var paginationUser = await _mediator.Send(paginationUsersQuery);
         return Ok(paginationUser);
+    }
+
+
+    [AllowAnonymous]
+    [HttpGet("roles", Name = "GetRolesList")]
+    [ProducesResponseType(typeof(List<string>), (int)HttpStatusCode.OK)]
+    public async Task<ActionResult<List<string>>> GetRolesList()
+    {
+        var query = new GetRolesQuery();
+        return Ok(await _mediator.Send(query));
     }
 }
