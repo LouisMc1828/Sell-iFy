@@ -2,6 +2,8 @@ using AutoMapper;
 using Sellify.Application.Features.Categories.Vms;
 using Sellify.Application.Features.Countries.Vms;
 using Sellify.Application.Features.Images.Queries.Vms;
+using Sellify.Application.Features.Products.Commands.CreateProduct;
+using Sellify.Application.Features.Products.Commands.UpdateProduct;
 using Sellify.Application.Features.Products.Queries.Vms;
 using Sellify.Application.Features.Reviews.Queries.Vms;
 using Sellify.Domain;
@@ -20,5 +22,8 @@ public class MappingProfile : Profile
         CreateMap<Review, ReviewVm>();
         CreateMap<Country, CountryVm>();
         CreateMap<Category, CategoryVm>();
+        CreateMap<CreateProductCommand, Product>();
+        CreateMap<UpdateProductCommand, Product>();
+        CreateMap<CreateProductImageCommand, Image>();
     }
 }
