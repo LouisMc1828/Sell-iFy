@@ -1,8 +1,10 @@
 using AutoMapper;
 using Org.BouncyCastle.Utilities.Zlib;
+using Sellify.Application.Features.Addresses.Vms;
 using Sellify.Application.Features.Categories.Vms;
 using Sellify.Application.Features.Countries.Vms;
 using Sellify.Application.Features.Images.Queries.Vms;
+using Sellify.Application.Features.Orders.Vms;
 using Sellify.Application.Features.Products.Commands.CreateProduct;
 using Sellify.Application.Features.Products.Commands.UpdateProduct;
 using Sellify.Application.Features.Products.Queries.Vms;
@@ -30,7 +32,11 @@ public class MappingProfile : Profile
         CreateMap<ShoppingCar, ShoppingCarVm>()
             .ForMember(x => x.ShoppingCarId, y => y.MapFrom(z => z.ShoppingCarMasterId));
         CreateMap<ShoppingCarItem, ShoppingCarItemVm>();
-
         CreateMap<ShoppingCarItemVm, ShoppingCarItem>();
+        CreateMap<Address, AddressVm>();
+        CreateMap<Order, OrderVm>();
+        CreateMap<OrderItem, OrderItemVm>();
+        CreateMap<OrderAddress, AddressVm>();
+
     }
 }

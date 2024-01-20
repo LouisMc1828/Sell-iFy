@@ -4,6 +4,7 @@ using Sellify.Application.Contracts.Identity;
 using Sellify.Application.Contracts.Infrasctructure;
 using Sellify.Application.Models.Email;
 using Sellify.Application.Models.ImageManagement;
+using Sellify.Application.Models.Payment;
 using Sellify.Application.Models.Token;
 using Sellify.Application.Persistence;
 using Sellify.Infrastructure.MessageImplementation;
@@ -29,6 +30,8 @@ public static class InfrastructureServiceRegistration
 
         services.Configure<CloudinarySettings>(configuration.GetSection("CloudinarySettings"));
         services.Configure<EmailSettings>(configuration.GetSection("EmailSettings"));
+
+        services.Configure<StripeSettings>(configuration.GetSection("StripeSettings"));
 
         return services;
     }
