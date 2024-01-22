@@ -1,8 +1,8 @@
 using AutoMapper;
 using MediatR;
-using PayPal.v1.Orders;
 using Sellify.Application.Features.Orders.Vms;
 using Sellify.Application.Persistence;
+using Sellify.Domain;
 
 namespace Sellify.Application.Features.Orders.Commands.UpdateOrder;
 

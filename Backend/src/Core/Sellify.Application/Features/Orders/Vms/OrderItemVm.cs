@@ -14,5 +14,5 @@ public class OrderItemVm
 
     public string? ProductNombre { get; set; }
 
-    public string? ImageUrl { get; set; }
+    public string? ImagenUrl { get; set; }
 }

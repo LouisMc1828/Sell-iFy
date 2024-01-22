@@ -67,6 +67,6 @@ public class OrderVm
             }
         }
 
-        set{}
+        /*set{}*/
     }
 }

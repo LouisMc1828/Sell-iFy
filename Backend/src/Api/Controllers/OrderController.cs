@@ -7,6 +7,7 @@ using Sellify.Application.Features.Addresses.Commands.CreateAddress;
 using Sellify.Application.Features.Addresses.Vms;
 using Sellify.Application.Features.Orders.Commands.CreateOrder;
 using Sellify.Application.Features.Orders.Commands.UpdateOrder;
+using Sellify.Application.Features.Orders.Queries.GetOrdersById;
 using Sellify.Application.Features.Orders.Vms;
 using Sellify.Application.Models.Authorization;
 
@@ -43,10 +44,20 @@ public class OrderController : ControllerBase
 
 
     [Authorize ( Roles = Role.ADMIN)]
-    [HttpPost(Name = "UpdateOrder")]
+    [HttpPut(Name = "UpdateOrder")]
     [ProducesResponseType((int)HttpStatusCode.OK)]
     public async Task<ActionResult<OrderVm>> UpdateOrder([FromBody] UpdateOrderCommand request)
     {
         return await _mediator.Send(request);
+    }
+
+
+    [Authorize ( Roles = Role.ADMIN)]
+    [HttpGet("{id}", Name = "GetOrderById")]
+    [ProducesResponseType(typeof(OrderVm), (int)HttpStatusCode.OK)]
+    public async Task<ActionResult<OrderVm>> GetOrderById(int id)
+    {
+        var query = new GetOrdersByIdQuery(id);
+        return Ok(await _mediator.Send(query));
     }
 }
