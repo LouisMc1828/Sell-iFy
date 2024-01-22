@@ -28,6 +28,9 @@ public class OrderVm
 
     public string? StripeApiKey { get; set; }
 
+    public string? PayPalOrderId { get; set; }
+    public string? PayPalOrderStatus { get; set; }
+
     public string? CompradorUsername { get; set; }
 
     public string? CompradorNombre { get; set; }
@@ -36,10 +39,7 @@ public class OrderVm
     {
         get { return OrderItems!.Sum(x => x.Cantidad); }
 
-        set
-        {
-
-        }
+        set {}
     }
 
     public string StatusLabel
@@ -67,9 +67,6 @@ public class OrderVm
             }
         }
 
-        set
-        {
-
-        }
+        set{}
     }
 }

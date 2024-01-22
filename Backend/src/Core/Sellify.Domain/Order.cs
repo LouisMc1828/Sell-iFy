@@ -53,4 +53,6 @@ public class Order : BaseDomainModel{
 
     public string? StripeApiKey { get; set; }
 
+    public string? PayPalOrderId { get; set; }
+    public string? PayPalOrderStatus { get; set; }
 }

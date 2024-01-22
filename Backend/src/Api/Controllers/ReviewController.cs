@@ -15,7 +15,7 @@ namespace Sellify.Api.Controllers;
 
 
 [ApiController]
-[Route("/api/v1/[controller]")]
+[Route("api/v1/[controller]")]
 public class ReviewController : ControllerBase
 {
     private IMediator _mediator;

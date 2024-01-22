@@ -13,7 +13,7 @@ namespace Sellify.Api.Controllers;
 
 
 [ApiController]
-[Route("/api/v1/[controller]")]
+[Route("api/v1/[controller]")]
 public class ShoppingCarController : ControllerBase
 {
     private IMediator _mediator;

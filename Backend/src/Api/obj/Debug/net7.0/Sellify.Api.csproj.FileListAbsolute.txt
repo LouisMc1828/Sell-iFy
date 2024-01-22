@@ -99,3 +99,6 @@ C:\Users\USER\Desktop\Sell-iFy\Backend\src\Api\bin\Debug\net7.0\Microsoft.Extens
 C:\Users\USER\Desktop\Sell-iFy\Backend\src\Api\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\Users\USER\Desktop\Sell-iFy\Backend\src\Api\bin\Debug\net7.0\System.CodeDom.dll
 C:\Users\USER\Desktop\Sell-iFy\Backend\src\Api\bin\Debug\net7.0\Postmark.dll
+C:\Users\USER\Desktop\Sell-iFy\Backend\src\Api\bin\Debug\net7.0\BraintreeHttp-Dotnet.dll
+C:\Users\USER\Desktop\Sell-iFy\Backend\src\Api\bin\Debug\net7.0\Source.dll
+C:\Users\USER\Desktop\Sell-iFy\Backend\src\Api\bin\Debug\net7.0\PayPalCheckoutSdk.dll

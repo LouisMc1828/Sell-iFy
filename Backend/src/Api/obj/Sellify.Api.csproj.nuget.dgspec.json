@@ -197,6 +197,14 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "PayPal": {
+              "target": "Package",
+              "version": "[2.0.0-rc2, )"
+            },
+            "PayPalCheckoutSdk": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "Postmark": {
               "target": "Package",
               "version": "[4.7.10, )"

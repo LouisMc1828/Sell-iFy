@@ -1,17 +1,20 @@
 using System.Net;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Sellify.Application.Contracts.Identity;
 using Sellify.Application.Features.Addresses.Commands.CreateAddress;
 using Sellify.Application.Features.Addresses.Vms;
 using Sellify.Application.Features.Orders.Commands.CreateOrder;
+using Sellify.Application.Features.Orders.Commands.UpdateOrder;
 using Sellify.Application.Features.Orders.Vms;
+using Sellify.Application.Models.Authorization;
 
 namespace Sellify.Api.Controllers;
 
 
 [ApiController]
-[Route("/api/v1/[controller]")]
+[Route("api/v1/[controller]")]
 public class OrderController : ControllerBase
 {
     private IMediator _mediator;
@@ -34,6 +37,15 @@ public class OrderController : ControllerBase
     [HttpPost(Name = "CreateOrder")]
     [ProducesResponseType((int)HttpStatusCode.OK)]
     public async Task<ActionResult<OrderVm>> CreateOrder([FromBody] CreateOrderCommand request)
+    {
+        return await _mediator.Send(request);
+    }
+
+
+    [Authorize ( Roles = Role.ADMIN)]
+    [HttpPost(Name = "UpdateOrder")]
+    [ProducesResponseType((int)HttpStatusCode.OK)]
+    public async Task<ActionResult<OrderVm>> UpdateOrder([FromBody] UpdateOrderCommand request)
     {
         return await _mediator.Send(request);
     }
