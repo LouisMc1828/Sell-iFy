@@ -14,7 +14,7 @@ public class ShoppingCarVm
             (
                 ShoppingCarItems!.Sum(x => x.Precio * x.Cantidad) +
                 (ShoppingCarItems!.Sum(x => x.Precio * x.Cantidad)*Convert.ToDecimal(0.18)) +
-                (ShoppingCarItems!.Sum(x => x.Precio * x.Cantidad) < 100 ? 100 : 250), 2
+                (ShoppingCarItems!.Sum(x => x.Precio * x.Cantidad) < 100 ? 10 : 25), 2
             );
         }
 
@@ -49,7 +49,7 @@ public class ShoppingCarVm
     {
         get
         {
-            return (ShoppingCarItems!.Sum(x => x.Precio * x.Cantidad)) < 100 ? 100 : 250;
+            return (ShoppingCarItems!.Sum(x => x.Precio * x.Cantidad)) < 100 ? 10 : 25;
         }
 
         set

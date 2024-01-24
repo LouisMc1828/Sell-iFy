@@ -1,25 +1,26 @@
 using System.Linq.Expressions;
 using AutoMapper;
 using MediatR;
+using Sellify.Application.Features.ShoppingCars.Commands.DeleteShoppingCarItem;
 using Sellify.Application.Features.ShoppingCars.Vms;
 using Sellify.Application.Persistence;
 using Sellify.Domain;
 
-namespace Sellify.Application.Features.ShoppingCars.Commands.DeleteShoppinCarItem;
+namespace Sellify.Application.Features.ShoppingCars.Commands.DeleteShoppingCarItem;
 
-public class DeleteShoppinCarItemCommandHandler : IRequestHandler<DeleteShoppinCarItemCommand, ShoppingCarVm>
+public class DeleteShoppingCarItemCommandHandler : IRequestHandler<DeleteShoppingCarItemCommand, ShoppingCarVm>
 {
 
     private readonly IUnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
 
-    public DeleteShoppinCarItemCommandHandler(IUnitOfWork unitOfWork, IMapper mapper)
+    public DeleteShoppingCarItemCommandHandler(IUnitOfWork unitOfWork, IMapper mapper)
     {
         _unitOfWork = unitOfWork;
         _mapper = mapper;
     }
 
-    public async Task<ShoppingCarVm> Handle(DeleteShoppinCarItemCommand request, CancellationToken cancellationToken)
+    public async Task<ShoppingCarVm> Handle(DeleteShoppingCarItemCommand request, CancellationToken cancellationToken)
     {
         var shoppingCarItemDelete = await _unitOfWork.Repository<ShoppingCarItem>().GetEntityAsync
         (

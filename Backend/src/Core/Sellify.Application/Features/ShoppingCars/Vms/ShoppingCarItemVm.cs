@@ -4,7 +4,7 @@ public class ShoppingCarItemVm
 {
     public int Id { get; set; }
 
-    public int ProductoId { get; set; }
+    public int ProductId { get; set; }
 
     public string? Producto { get; set; }
 
@@ -20,7 +20,7 @@ public class ShoppingCarItemVm
     {
         get
         {
-            return Math.Round(Cantidad*Precio, 2);
+            return Math.Round(Cantidad * Precio, 2);
         }
 
         set
@@ -29,5 +29,5 @@ public class ShoppingCarItemVm
         }
     }
 
-    public Guid? ShoppingCarMasterId { get; internal set; }
+    //public Guid? ShoppingCarMasterId { get; internal set; }
 }

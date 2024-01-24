@@ -43,7 +43,7 @@ public class OrderController : ControllerBase
     }
 
 
-    [Authorize ( Roles = Role.ADMIN)]
+    [Authorize (Roles = Role.ADMIN)]
     [HttpPut(Name = "UpdateOrder")]
     [ProducesResponseType((int)HttpStatusCode.OK)]
     public async Task<ActionResult<OrderVm>> UpdateOrder([FromBody] UpdateOrderCommand request)
@@ -52,7 +52,7 @@ public class OrderController : ControllerBase
     }
 
 
-    [Authorize ( Roles = Role.ADMIN)]
+    //[Authorize ( Roles = Role.ADMIN)]
     [HttpGet("{id}", Name = "GetOrderById")]
     [ProducesResponseType(typeof(OrderVm), (int)HttpStatusCode.OK)]
     public async Task<ActionResult<OrderVm>> GetOrderById(int id)

@@ -34,7 +34,7 @@ public class SellifyDbContextData
                     Telefono = "2015812550",
                     AvatarUrl = "https://firebasestorage.googleapis.com/v0/b/edificacion-app.appspot.com/o/avatar-1.webp?alt=media&token=58da3007-ff21-494d-a85c-25ffa758ff6d"
                 };
-                await userManager.CreateAsync(usuarioAdmin, "PasswordMorilloDelacruz1809$");
+                await userManager.CreateAsync(usuarioAdmin, "Password_morillodelacruz1809");
                 await userManager.AddToRoleAsync(usuarioAdmin, Role.ADMIN);
 
                 var usuario = new Usuario

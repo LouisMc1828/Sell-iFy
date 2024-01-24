@@ -43,7 +43,7 @@ public class UpdateShoppingCarCommandHandler : IRequestHandler<UpdateShoppingCar
         shoppingCarItemsToAdd.ForEach(
             x => { x.ShoppingCarId = shoppingCarUpdate.Id; x.ShoppingCarMasterId = request.ShoppingCarId;});
 
-        _unitOfWork.Repository<ShoppingCarItem>().AddRange(shoppingCarItemsToAdd!);
+        _unitOfWork.Repository<ShoppingCarItem>().AddRange(shoppingCarItemsToAdd);
 
         var result = await _unitOfWork.Complete();
 

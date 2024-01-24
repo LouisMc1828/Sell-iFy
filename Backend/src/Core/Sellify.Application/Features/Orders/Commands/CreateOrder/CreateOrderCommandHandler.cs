@@ -80,7 +80,7 @@ public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommand, Ord
 
         var subTotal = Math.Round( shoppingCar.ShoppingCarItems!.Sum( x => x.Precio * x.Cantidad),2);
         var impuesto = Math.Round(subTotal * Convert.ToDecimal(0.18), 2);
-        var precioEnvio = subTotal < 1000 ? 100 : 250;
+        var precioEnvio = subTotal < 1000 ? 10 : 25;
         var total = subTotal + precioEnvio + impuesto;
 
         var comprador = $"{user.Nombre} {user.Apellido}";

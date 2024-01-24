@@ -28,8 +28,6 @@ public class OrderVm
 
     public string? StripeApiKey { get; set; }
 
-    public string? PayPalOrderId { get; set; }
-    public string? PayPalOrderStatus { get; set; }
 
     public string? CompradorUsername { get; set; }
 

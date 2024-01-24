@@ -2,7 +2,7 @@ using System.Net;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Sellify.Application.Features.ShoppingCars.Commands.DeleteShoppinCarItem;
+using Sellify.Application.Features.ShoppingCars.Commands.DeleteShoppingCarItem;
 using Sellify.Application.Features.ShoppingCars.Commands.UpdateShoppingCar;
 using Sellify.Application.Features.ShoppingCars.Queries.GetShoppingCarById;
 using Sellify.Application.Features.ShoppingCars.Vms;
@@ -51,6 +51,6 @@ public class ShoppingCarController : ControllerBase
     public async Task<ActionResult<ShoppingCarVm>> DeleteShoppingCar(int id)
     {
 
-        return await _mediator.Send(new DeleteShoppinCarItemCommand() { Id=id });
+        return await _mediator.Send(new DeleteShoppingCarItemCommand() { Id = id });
     }
 }
