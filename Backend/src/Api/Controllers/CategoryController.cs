@@ -14,7 +14,7 @@ namespace Sellify.Api.Controllers;
 public class CategoryController : ControllerBase
 {
 
-    private readonly IMediator _mediator;
+    private IMediator _mediator;
 
     public CategoryController(IMediator mediator)
     {
@@ -22,9 +22,9 @@ public class CategoryController : ControllerBase
     }
 
     [AllowAnonymous]
-    [HttpGet("list", Name ="GetCategoriesList")]
+    [HttpGet("list", Name ="GetCategoryList")]
     [ProducesResponseType(typeof(IReadOnlyList<CategoryVm>), (int)HttpStatusCode.OK)]
-    public async Task<ActionResult<IReadOnlyList<CategoryVm>>> GetCategoriesList()
+    public async Task<ActionResult<IReadOnlyList<CategoryVm>>> GetCategoryList()
     {
         var query = new GetCategoryListQuery();
         return Ok(await _mediator.Send(query));

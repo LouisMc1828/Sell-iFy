@@ -1,7 +1,6 @@
 using System.Linq.Expressions;
 using AutoMapper;
 using MediatR;
-using Sellify.Application.Features.Orders.Queries.GetOrdersById;
 using Sellify.Application.Features.Orders.Vms;
 using Sellify.Application.Persistence;
 using Sellify.Domain;

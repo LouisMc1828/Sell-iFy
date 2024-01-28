@@ -54,7 +54,9 @@ public class AuthService : IAuthService
 
     public string GetSessionUser()
     {
-        var username = _httpContextAccessor.HttpContext!.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)?.Value;
+        var username = _httpContextAccessor.HttpContext!.User?.Claims?
+        .FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)?.Value;
+
         return username!;
     }
 }

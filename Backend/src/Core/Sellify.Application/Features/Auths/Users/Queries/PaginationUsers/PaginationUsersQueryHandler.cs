@@ -4,7 +4,7 @@ using Sellify.Application.Persistence;
 using Sellify.Application.Specification.Users;
 using Sellify.Domain;
 
-namespace Sellify.Application.Features.Auths.Users.PaginationUsers;
+namespace Sellify.Application.Features.Auths.Users.Queries.PaginationUsers;
 
 public class PaginationUsersQueryHandler : IRequestHandler<PaginationUsersQuery, PaginationVm<Usuario>>
 {

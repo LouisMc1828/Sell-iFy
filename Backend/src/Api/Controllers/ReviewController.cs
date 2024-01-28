@@ -1,14 +1,15 @@
 using System.Net;
-using MediatR;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Sellify.Application.Features.Auths.Users.PaginationUsers;
+using Sellify.Application.Features.Auths.Users.Queries.PaginationUsers;
 using Sellify.Application.Features.Reviews.Commands.CreateReview;
 using Sellify.Application.Features.Reviews.Commands.DeleteReview;
 using Sellify.Application.Features.Reviews.Queries.PaginationReviews;
 using Sellify.Application.Features.Reviews.Queries.Vms;
 using Sellify.Application.Features.Shared.Queries;
 using Sellify.Application.Models.Authorization;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace Sellify.Api.Controllers;
 
@@ -44,7 +45,7 @@ public class ReviewController : ControllerBase
 
 
     [Authorize(Roles = Role.ADMIN)]
-    [HttpGet("paginationReview", Name = "PaginationReview")]
+    [HttpGet("paginationReviews", Name = "PaginationReview")]
     [ProducesResponseType(typeof(PaginationVm<ReviewVm>), (int)HttpStatusCode.OK)]
     public async Task<ActionResult<Unit>> PaginationReview([FromQuery] PaginationReviewsQuery request)
     {

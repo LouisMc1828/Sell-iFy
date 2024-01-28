@@ -1,11 +1,12 @@
 using System.Net;
-using MediatR;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
 using Sellify.Application.Features.ShoppingCars.Commands.DeleteShoppingCarItem;
 using Sellify.Application.Features.ShoppingCars.Commands.UpdateShoppingCar;
 using Sellify.Application.Features.ShoppingCars.Queries.GetShoppingCarById;
 using Sellify.Application.Features.ShoppingCars.Vms;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace Sellify.Api.Controllers;
 
@@ -29,8 +30,8 @@ public class ShoppingCarController : ControllerBase
     [ProducesResponseType(typeof(ShoppingCarVm), (int)HttpStatusCode.OK)]
     public async Task<ActionResult<ShoppingCarVm>> GetShoppingCar(Guid id)
     {
-        var shoppingCar = id == Guid.Empty ? Guid.NewGuid() : id;
-        var query = new GetShoppingCarByIdQuery(shoppingCar);
+        var shoppingCarId = id == Guid.Empty ? Guid.NewGuid() : id;
+        var query = new GetShoppingCarByIdQuery(shoppingCarId);
 
         return await _mediator.Send(query);
     }

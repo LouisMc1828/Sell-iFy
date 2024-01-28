@@ -14,7 +14,7 @@ namespace Sellify.Api.Controllers;
 public class CountryController : ControllerBase
 {
 
-    private readonly IMediator _mediator;
+    private IMediator _mediator;
 
     public CountryController(IMediator mediator)
     {
@@ -22,7 +22,7 @@ public class CountryController : ControllerBase
     }
 
     [AllowAnonymous]
-    [HttpGet(Name ="GetCountries")]
+    [HttpGet(Name = "GetCountries")]
     [ProducesResponseType(typeof(IReadOnlyList<CountryVm>), (int)HttpStatusCode.OK)]
     public async Task<ActionResult<IReadOnlyList<CountryVm>>> GetCountries()
     {

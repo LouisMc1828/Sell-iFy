@@ -5,12 +5,12 @@ using Sellify.Domain;
 
 namespace Sellify.Application.Features.Auths.Users.Queries.GetUserByUsername;
 
-public class GetUserByUsernameQueryHanlder : IRequestHandler<GetUserByUsernameQuery, AuthResponse>
+public class GetUserByUsernameQueryHandler : IRequestHandler<GetUserByUsernameQuery, AuthResponse>
 {
 
     private readonly UserManager<Usuario> _userManager;
 
-    public GetUserByUsernameQueryHanlder(UserManager<Usuario> userManager)
+    public GetUserByUsernameQueryHandler(UserManager<Usuario> userManager)
     {
         _userManager = userManager;
     }

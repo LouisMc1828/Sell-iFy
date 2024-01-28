@@ -1,7 +1,4 @@
 using System.Net;
-using MediatR;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
 using Sellify.Application.Contracts.Infrasctructure;
 using Sellify.Application.Features.Auths.Roles.Queries.GetRoles;
 using Sellify.Application.Features.Auths.Users.Commands.LoginUser;
@@ -12,15 +9,19 @@ using Sellify.Application.Features.Auths.Users.Commands.SendPassword;
 using Sellify.Application.Features.Auths.Users.Commands.UpdateAdminStatusUser;
 using Sellify.Application.Features.Auths.Users.Commands.UpdateAdminUser;
 using Sellify.Application.Features.Auths.Users.Commands.UpdateUser;
-using Sellify.Application.Features.Auths.Users.PaginationUsers;
 using Sellify.Application.Features.Auths.Users.Queries.GetUserById;
 using Sellify.Application.Features.Auths.Users.Queries.GetUserByToken;
 using Sellify.Application.Features.Auths.Users.Queries.GetUserByUsername;
+using Sellify.Application.Features.Auths.Users.Queries.PaginationUsers;
 using Sellify.Application.Features.Auths.Users.Vms;
 using Sellify.Application.Features.Shared.Queries;
 using Sellify.Application.Models.Authorization;
 using Sellify.Application.Models.ImageManagement;
 using Sellify.Domain;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace Sellify.Api.Controllers;
 

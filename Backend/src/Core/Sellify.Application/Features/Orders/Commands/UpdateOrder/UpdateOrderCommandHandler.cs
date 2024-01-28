@@ -26,7 +26,7 @@ public class UpdateOrderCommandHandler : IRequestHandler<UpdateOrderCommand, Ord
         var result = await _unitOfWork.Complete();
         if ( result <= 0)
         {
-            throw new Exception("Cannot update");
+            throw new Exception("Cannot update status of order");
         }
 
         return _mapper.Map<OrderVm>(order);

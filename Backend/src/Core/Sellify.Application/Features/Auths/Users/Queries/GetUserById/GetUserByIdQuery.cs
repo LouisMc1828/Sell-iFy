@@ -9,6 +9,6 @@ public class GetUserByIdQuery : IRequest<AuthResponse>
 
     public GetUserByIdQuery(string userId)
     {
-        UserId = userId ?? throw new ArgumentNullException(nameof(UserId));
+        UserId = userId ?? throw new ArgumentNullException(nameof(userId));
     }
 }

@@ -110,7 +110,7 @@ using(var scope = app.Services.CreateScope()){
     }
     catch (Exception ex)
     {
-        var logger =loggerFactory.CreateLogger<Program>();
+        var logger = loggerFactory.CreateLogger<Program>();
         logger.LogError(ex, "No se pudo completar la migracion");
     }
 }

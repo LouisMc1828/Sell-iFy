@@ -1,7 +1,4 @@
-
-using MediatR;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+using System.Net;
 using Sellify.Application.Contracts.Infrasctructure;
 using Sellify.Application.Features.Products.Commands.CreateProduct;
 using Sellify.Application.Features.Products.Commands.DeleteProduct;
@@ -15,7 +12,11 @@ using Sellify.Application.Models.Authorization;
 using Sellify.Application.Models.ImageManagement;
 using Sellify.Domain;
 using Sellify.Infrastructure.ImageCloudinary;
-using System.Net;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+
+
 
 namespace Sellify.Api.Controllers;
 

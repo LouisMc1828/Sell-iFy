@@ -42,7 +42,7 @@ public class OrderVm
 
     public string StatusLabel
     {
-        get{
+        get {
             switch (Status)
             {
                 case OrderStatus.Completed: {

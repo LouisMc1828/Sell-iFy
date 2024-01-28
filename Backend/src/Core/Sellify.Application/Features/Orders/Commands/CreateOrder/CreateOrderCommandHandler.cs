@@ -103,7 +103,7 @@ public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommand, Ord
             var orderItem = new OrderItem
             {
                 ProductNombre =shoppingProduct.Producto,
-                ProductId = shoppingProduct.ProductId,
+                ProductId = shoppingProduct.Id,
                 ImagenUrl = shoppingProduct.Imagen,
                 Precio = shoppingProduct.Precio,
                 Cantidad = shoppingProduct.Cantidad,
