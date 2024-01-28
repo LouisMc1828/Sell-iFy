@@ -10,6 +10,8 @@ using Sellify.Application.Models.Authorization;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Sellify.Application.Features.Shared.Queries;
+using Sellify.Application.Features.Orders.Queries.PaginationOrders;
 
 
 namespace Sellify.Api.Controllers;
@@ -59,5 +61,32 @@ public class OrderController : ControllerBase
     {
         var query = new GetOrdersByIdQuery(id);
         return Ok(await _mediator.Send(query));
+    }
+
+
+    [HttpGet("paginationByUsername", Name = "PaginationOrderByUsername")]
+    [ProducesResponseType(typeof(PaginationVm<OrderVm>), (int)HttpStatusCode.OK)]
+    public async Task<ActionResult<PaginationVm<OrderVm>>> PaginationOrderByUsername
+    (
+        [FromQuery] PaginationOrdersQuery paginationOrdersParams
+    )
+    {
+        paginationOrdersParams.Username = _authService.GetSessionUser();
+        var pagination = await _mediator.Send(paginationOrdersParams);
+
+        return Ok(pagination);
+    }
+
+    [Authorize(Roles = Role.ADMIN)]
+    [HttpGet("paginationAdmin", Name = "PaginationOrder")]
+    [ProducesResponseType(typeof(PaginationVm<OrderVm>), (int)HttpStatusCode.OK)]
+    public async Task<ActionResult<PaginationVm<OrderVm>>> PaginationOrder
+    (
+        [FromQuery] PaginationOrdersQuery paginationOrdersParams
+    )
+    {
+        var pagination = await _mediator.Send(paginationOrdersParams);
+
+        return Ok(pagination);
     }
 }
