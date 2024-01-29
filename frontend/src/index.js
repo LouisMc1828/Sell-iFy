@@ -1,11 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
 import App from './App';
+import store from './Store';
+
+import {positions, transitions, Provider as AlertProvider} from "react-alert";
+import AlertTemplate from 'react-alert-template-basic';
+
+const options = {
+  timeout: 5000,
+  offset: '30px',
+  position: positions.BOTTOM_CENTER,
+  transition: transitions.SCALE
+};
+
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <Provider store={store}>
+  <AlertProvider template = {AlertTemplate} {...options}>
     <App />
-  </React.StrictMode>
+  </AlertProvider>
+  </Provider>
 );
 
