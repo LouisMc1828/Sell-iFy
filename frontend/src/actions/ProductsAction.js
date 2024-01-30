@@ -38,6 +38,7 @@ export const getProductPagination = createAsyncThunk(
     async (params, { rejectWithValue }) => {
         try
         {
+            await delayedTimeout(1000);
             params = httpParams(params);
             const paramUrl = new URLSearchParams(params).toString();
             var results = axios.get(`api/v1/product/pagination?${paramUrl}`);
