@@ -57,7 +57,7 @@ export const update = createAsyncThunk(
           "Content-Type": "multipart/form-data",
         },
       };
-      const { data } = await axios.post(
+      const { data } = await axios.put(
         `/api/v1/user/update`,
         params,
         requestConfig

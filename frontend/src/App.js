@@ -7,12 +7,13 @@ import Header from "./components/layout/Header";
 import ProductDetail from "./components/product/ProductDetail";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { getCategories } from "./actions/CategoryAction";
+import { getCategories } from './actions/CategoryAction';
 import Login from "./components/security/Login";
 import Register from "./components/security/Register";
 import Profile from "./components/security/Profile";
 import ProtectedRoute from "./components/route/ProtectedRoute";
-import { loadUser } from "./actions/UserAction";
+import { loadUser } from './actions/UserAction';
+import UpdateProfile from "./components/security/UpdateProfile";
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
 
     if(token)
     {
-      dispatch (loadUser({}));
+      dispatch(loadUser({}));
     }
 
   }, [dispatch, token]);
@@ -40,8 +41,14 @@ function App() {
           <Route path="/product/:id" element={<ProductDetail/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
-          <Route exact path="/me" element={<ProtectedRoute/>}/>
-          <Route path="/me" element={<Profile/>}/>
+          <Route exact path="/me" element={<ProtectedRoute />}>
+            <Route path="/me" element={<Profile />} />
+          </Route>
+          
+          <Route exact path="/me/update" element={<ProtectedRoute />}>
+            <Route path="/me/update" element={<UpdateProfile />} />
+          </Route>
+          
         </Routes>
       </div>
 
