@@ -10,14 +10,25 @@ import { useEffect } from "react";
 import { getCategories } from "./actions/CategoryAction";
 import Login from "./components/security/Login";
 import Register from "./components/security/Register";
+import Profile from "./components/security/Profile";
+import ProtectedRoute from "./components/route/ProtectedRoute";
+import { loadUser } from "./actions/UserAction";
 
 
 function App() {
   const dispatch = useDispatch();
 
+  const token = localStorage.getItem('token');
+
   useEffect(() => {
     dispatch(getCategories({}));
-  }, [dispatch])
+
+    if(token)
+    {
+      dispatch (loadUser({}));
+    }
+
+  }, [dispatch, token]);
   return (
     <Router>
       <div className="App">
@@ -29,6 +40,8 @@ function App() {
           <Route path="/product/:id" element={<ProductDetail/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
+          <Route exact path="/me" element={<ProtectedRoute/>}/>
+          <Route path="/me" element={<Profile/>}/>
         </Routes>
       </div>
 
