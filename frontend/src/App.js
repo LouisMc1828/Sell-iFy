@@ -8,6 +8,7 @@ import ProductDetail from "./components/product/ProductDetail";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { getCategories } from "./actions/CategoryAction";
+import Login from "./components/security/Login";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/product/:id" element={<ProductDetail/>}/>
+          <Route path="/login" element={<Login/>}/>
         </Routes>
       </div>
 
