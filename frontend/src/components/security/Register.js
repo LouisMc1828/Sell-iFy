@@ -187,6 +187,7 @@ const onChange = (e) => {
               id="register_button"
               type="submit"
               className="btn btn-block py-3"
+              disabled={ loading ? true : false }
             >
               Registrar
             </button>
