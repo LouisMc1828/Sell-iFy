@@ -9,7 +9,8 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
 
-const { user, loading } = useSelector(state => state.security);
+  const { shoppingCarItems } = useSelector(state => state.car);
+const { user, loading } = useSelector((state) => state.security);
 const dispatch = useDispatch();
 const alert = useAlert();
 
@@ -26,7 +27,9 @@ const logoutHandler = () => {
       <nav className="navbar row">
         <div className="col-12 col-md-3">
           <div className="navbar-brand">
-            <img src="/images/logo1.png" />
+            <Link to="/">
+              <img src="/images/logo1.png" />
+            </Link>
           </div>
         </div>
 
@@ -36,19 +39,21 @@ const logoutHandler = () => {
 
         <div className="col-12 col-md-3 mt-4 mt-md-0 text-center">
 
-        <span id="cart" className="ml-3">
-          Cart
+        <Link to="/car">
+        <span id="car" className="ml-3">
+          Car
         </span>
-        <span className="ml-1" id="cart_count">
-          2
+        <span className="ml-1" id="car_count">
+          { shoppingCarItems.length }
         </span>
+        </Link>
 
         {
         user ?
           (
             <div className="ml-4 dropdown d-inline">
           <Link
-            to = "#"
+            to = "#!"
             className = "btn dropdown-toggle text-white mr-4"
             type = "button"
             data-toggle = "dropdown"

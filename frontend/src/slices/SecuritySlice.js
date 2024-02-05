@@ -10,12 +10,12 @@ const initialState = {
     isUpdated: false,
     dirEnvio: null
 };
- 
+
 export const securitySlice = createSlice({
     name: "security",
     initialState,
     reducers: {
-        logout: (state, action) => {
+        logout: (state) => {
             localStorage.removeItem("token");
             state.isAuthenticated = false;
             state.user = null;
@@ -24,7 +24,7 @@ export const securitySlice = createSlice({
             state.dirEnvio = null;
         },
 
-        resetUpdateStatus: (state, action) => {
+        resetUpdateStatus: (state) => {
             state.isUpdated = false;
         },
     },
@@ -86,7 +86,7 @@ export const securitySlice = createSlice({
             state.loading = true;
             state.errores = [];
         },
-        [updatePassword.fulfilled]: (state, {payload}) => {
+        [updatePassword.fulfilled]: (state) => {
             state.loading = false;
             state.isUpdated = true;
         },

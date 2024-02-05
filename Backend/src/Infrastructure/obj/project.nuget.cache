@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZZbXUaUCB9OSZs/nzsgw8hnSevECM0ORr4/xwiH6AI4IV/PCpDGPS8GkJw8/9aN7UNudKDmx16IcKWGAsYed6A==",
+  "dgSpecHash": "7CdkZRbOydwFZN3ahBqBRyQin2FUDpndrZkgGYzwTWYlv5Db8kYyTu6TnZJZFM0iG2A9F6Ye6SI/PWiTeTy/Dg==",
   "success": true,
-  "projectFilePath": "c:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Infrastructure\\Sellify.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\USER\\Desktop\\Sell-iFy\\Backend\\src\\Infrastructure\\Sellify.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
