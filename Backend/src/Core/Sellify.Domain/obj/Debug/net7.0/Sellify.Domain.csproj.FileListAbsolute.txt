@@ -10,3 +10,15 @@ C:\Users\USER\Desktop\Sell-iFy\Backend\src\Core\Sellify.Domain\obj\Debug\net7.0\
 C:\Users\USER\Desktop\Sell-iFy\Backend\src\Core\Sellify.Domain\obj\Debug\net7.0\Sellify.Domain.pdb
 C:\Users\USER\Desktop\Sell-iFy\Backend\src\Core\Sellify.Domain\obj\Debug\net7.0\ref\Sellify.Domain.dll
 C:\Users\USER\Desktop\Sell-iFy\Backend\src\Core\Sellify.Domain\obj\Debug\net7.0\Sellify.Domain.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Core\Sellify.Domain\bin\Debug\net7.0\Sellify.Domain.deps.json
+C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Core\Sellify.Domain\bin\Debug\net7.0\Sellify.Domain.dll
+C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Core\Sellify.Domain\bin\Debug\net7.0\Sellify.Domain.pdb
+C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Core\Sellify.Domain\obj\Debug\net7.0\Sellify.Domain.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Core\Sellify.Domain\obj\Debug\net7.0\Sellify.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Core\Sellify.Domain\obj\Debug\net7.0\Sellify.Domain.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Core\Sellify.Domain\obj\Debug\net7.0\Sellify.Domain.AssemblyInfo.cs
+C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Core\Sellify.Domain\obj\Debug\net7.0\Sellify.Domain.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Core\Sellify.Domain\obj\Debug\net7.0\Sellify.Domain.dll
+C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Core\Sellify.Domain\obj\Debug\net7.0\refint\Sellify.Domain.dll
+C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Core\Sellify.Domain\obj\Debug\net7.0\Sellify.Domain.pdb
+C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Core\Sellify.Domain\obj\Debug\net7.0\ref\Sellify.Domain.dll

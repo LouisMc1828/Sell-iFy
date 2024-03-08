@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addItemShoppingCar, removeItemShoppingCar } from "../../actions/CarAction";
 
 const Car = () => {
-  const { shoppingCarItems, shoppingCarId, total, cantidad } = useSelector(
+  const { shoppingCarItems, shoppingCarId, total, cantidad, subTotal } = useSelector(
     (state) => state.car
   );
   const { isAuthenticated } = useSelector((state) => state.security);
@@ -137,8 +137,12 @@ const Car = () => {
                 <h4>Orden De Compra</h4>
                 <hr />
                 <p>
-                  Subtotal:{" "}
+                  Cantidad:{" "}
                   <span className="order-summary-values">{cantidad} (Unidades)</span>
+                </p>
+                <p>
+                  Subtotal:{" "}
+                  <span className="order-summary-values">{subTotal}</span>
                 </p>
                 <p>
                   Est. total:{" "}
@@ -146,7 +150,7 @@ const Car = () => {
                 </p>
 
                 <hr />
-                <button id="checkout_btn" className="btn btn-primary btn-block" conClick={checkoutHandler}>
+                <button id="checkout_btn" className="btn btn-primary btn-block" onClick={checkoutHandler}>
                   Check out
                 </button>
               </div>

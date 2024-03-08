@@ -1,5 +1,5 @@
-import React, { Fragment, useEffect, useState } from 'react'
-import { useAlert } from 'react-alert'
+import React, { Fragment, useEffect, useState } from 'react';
+import { useAlert } from 'react-alert';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import MetaData from '../layout/MetaData';

@@ -12,7 +12,7 @@ using Sellify.Infrastructure.Persistence;
 namespace Sellify.Infrastructure.Migrations
 {
     [DbContext(typeof(SellifyDbContext))]
-    [Migration("20240124161543_InitMigration")]
+    [Migration("20240228025137_InitMigration")]
     partial class InitMigration
     {
         /// <inheritdoc />

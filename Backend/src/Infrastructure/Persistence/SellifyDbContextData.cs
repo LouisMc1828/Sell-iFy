@@ -39,14 +39,14 @@ public class SellifyDbContextData
 
                 var usuario = new Usuario
                 {
-                    Nombre = "Pedro",
-                    Apellido = "Martinez",
-                    Email = "p.martinez10@gmail.com",
-                    UserName = "PMtz",
+                    Nombre = "Johan",
+                    Apellido = "Almonte",
+                    Email = "almonte@gmail.com",
+                    UserName = "theSholva",
                     Telefono = "2015812844877",
                     AvatarUrl = "https://firebasestorage.googleapis.com/v0/b/edificacion-app.appspot.com/o/vaxidrez.jpg?alt=media&token=14a28860-d149-461e-9c25-9774d7ac1b24"
                 };
-                await userManager.CreateAsync(usuario, "PasswordPdrMamirez24$");
+                await userManager.CreateAsync(usuario, "PasswordJMAlmonteC24$");
                 await userManager.AddToRoleAsync(usuario, Role.USER);
             }
             if(!context.Categories!.Any())
