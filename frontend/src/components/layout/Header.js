@@ -28,7 +28,7 @@ const logoutHandler = () => {
         <div className="col-12 col-md-3">
           <div className="navbar-brand">
             <Link to="/">
-              <img src="/images/logo1.png" />
+              <img src="/images/Logo PNG.png" width="149" height="58" />
             </Link>
           </div>
         </div>
