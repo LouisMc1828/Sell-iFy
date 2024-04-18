@@ -118,7 +118,7 @@ function onChangeStar(star)
                     onAfterChange = {onAfterChange}
                   />
                 </div>
-                
+
                 <hr className = "my-5"/>
 
                 <div className = "mt-5">
@@ -149,8 +149,6 @@ function onChangeStar(star)
                       }
                     </ul>
                 </div>
-
-
               </div>
 
               <div className="col-6 col-md-9">
@@ -162,11 +160,6 @@ function onChangeStar(star)
           ):
           <Products col = {4} products = {products} loading = {loading} />
         }
-
-
-
-        
-
         </div>
       </section>
 

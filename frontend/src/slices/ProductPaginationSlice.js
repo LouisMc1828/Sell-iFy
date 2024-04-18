@@ -6,7 +6,8 @@ export const initialState = {
     products: [],
     count: 0,
     pageIndex: 1,
-    pageSize: 2,
+    //productos en pagina
+    pageSize: 6,
     pageCount: 0,
     loading: false,
     resultByPage: 0,

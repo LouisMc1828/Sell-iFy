@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER\\Desktop\\Nueva carpeta\\Sell-iFy\\Backend\\src\\Core\\Sellify.Domain\\Sellify.Domain.csproj": {}
+    "c:\\Users\\USER\\Desktop\\Nueva carpeta\\Sell-iFy\\Backend\\src\\Core\\Sellify.Domain\\Sellify.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER\\Desktop\\Nueva carpeta\\Sell-iFy\\Backend\\src\\Core\\Sellify.Domain\\Sellify.Domain.csproj": {
+    "c:\\Users\\USER\\Desktop\\Nueva carpeta\\Sell-iFy\\Backend\\src\\Core\\Sellify.Domain\\Sellify.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\Desktop\\Nueva carpeta\\Sell-iFy\\Backend\\src\\Core\\Sellify.Domain\\Sellify.Domain.csproj",
+        "projectUniqueName": "c:\\Users\\USER\\Desktop\\Nueva carpeta\\Sell-iFy\\Backend\\src\\Core\\Sellify.Domain\\Sellify.Domain.csproj",
         "projectName": "Sellify.Domain",
-        "projectPath": "C:\\Users\\USER\\Desktop\\Nueva carpeta\\Sell-iFy\\Backend\\src\\Core\\Sellify.Domain\\Sellify.Domain.csproj",
+        "projectPath": "c:\\Users\\USER\\Desktop\\Nueva carpeta\\Sell-iFy\\Backend\\src\\Core\\Sellify.Domain\\Sellify.Domain.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\Desktop\\Nueva carpeta\\Sell-iFy\\Backend\\src\\Core\\Sellify.Domain\\obj\\",
+        "outputPath": "c:\\Users\\USER\\Desktop\\Nueva carpeta\\Sell-iFy\\Backend\\src\\Core\\Sellify.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
