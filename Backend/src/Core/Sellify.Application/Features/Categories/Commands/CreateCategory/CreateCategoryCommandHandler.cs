@@ -1,4 +1,4 @@
-
+/*
 using MediatR;
 using Sellify.Application.Features.Categories.Vms;
 using Sellify.Application.Persistence;
@@ -20,4 +20,4 @@ public class CreateCategoryCommandHandler : IRequestHandler<CreateCategoryComman
     {
         
     }
-}
+}*/
