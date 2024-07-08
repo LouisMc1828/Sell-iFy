@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HNcNTVnwq2maLYtwfl3i05WJC3GalgblVV/oviHoov98NJivfw3BEkdL4mA5da4UL79bHNF2Ae6QfP5my3cofQ==",
+  "dgSpecHash": "T998GD8lGHM=",
   "success": true,
   "projectFilePath": "C:\\Users\\USER\\Desktop\\Nueva carpeta\\Sell-iFy\\Backend\\src\\Core\\Sellify.Application\\Sellify.Application.csproj",
   "expectedPackageFiles": [
@@ -164,5 +164,16 @@
     "C:\\Users\\USER\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"System.IdentityModel.Tokens.Jwt\" 6.25.1 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
+      "libraryId": "System.IdentityModel.Tokens.Jwt",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

@@ -194,9 +194,10 @@ C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Api\obj\Debug\net7.0\st
 C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Api\obj\Debug\net7.0\staticwebassets.build.json
 C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Api\obj\Debug\net7.0\staticwebassets.development.json
 C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Api\obj\Debug\net7.0\scopedcss\bundle\Sellify.Api.styles.css
-C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Api\obj\Debug\net7.0\Sellify.Api.csproj.CopyComplete
 C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Api\obj\Debug\net7.0\Sellify.Api.dll
 C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Api\obj\Debug\net7.0\refint\Sellify.Api.dll
 C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Api\obj\Debug\net7.0\Sellify.Api.pdb
 C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Api\obj\Debug\net7.0\Sellify.Api.genruntimeconfig.cache
 C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Api\obj\Debug\net7.0\ref\Sellify.Api.dll
+C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Api\obj\Debug\net7.0\Sellify.Api.sourcelink.json
+C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Api\obj\Debug\net7.0\Sellify..0301B117.Up2Date

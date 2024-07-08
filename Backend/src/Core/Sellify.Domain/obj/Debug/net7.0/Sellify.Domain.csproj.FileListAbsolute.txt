@@ -22,3 +22,4 @@ C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Core\Sellify.Domain\obj
 C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Core\Sellify.Domain\obj\Debug\net7.0\refint\Sellify.Domain.dll
 C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Core\Sellify.Domain\obj\Debug\net7.0\Sellify.Domain.pdb
 C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Core\Sellify.Domain\obj\Debug\net7.0\ref\Sellify.Domain.dll
+C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Core\Sellify.Domain\obj\Debug\net7.0\Sellify.Domain.sourcelink.json

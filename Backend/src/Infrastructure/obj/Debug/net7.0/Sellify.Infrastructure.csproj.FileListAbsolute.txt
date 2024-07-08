@@ -30,9 +30,10 @@ C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Infrastructure\obj\Debu
 C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Infrastructure\obj\Debug\net7.0\Sellify.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Infrastructure\obj\Debug\net7.0\Sellify.Infrastructure.AssemblyInfo.cs
 C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Infrastructure\obj\Debug\net7.0\Sellify.Infrastructure.csproj.CoreCompileInputs.cache
-C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Infrastructure\obj\Debug\net7.0\Sellify.Infrastructure.csproj.CopyComplete
 C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Infrastructure\obj\Debug\net7.0\Sellify.Infrastructure.dll
 C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Infrastructure\obj\Debug\net7.0\refint\Sellify.Infrastructure.dll
 C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Infrastructure\obj\Debug\net7.0\Sellify.Infrastructure.pdb
 C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Infrastructure\obj\Debug\net7.0\Sellify.Infrastructure.genruntimeconfig.cache
 C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Infrastructure\obj\Debug\net7.0\ref\Sellify.Infrastructure.dll
+C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Infrastructure\obj\Debug\net7.0\Sellify.Infrastructure.sourcelink.json
+C:\Users\USER\Desktop\Nueva carpeta\Sell-iFy\Backend\src\Infrastructure\obj\Debug\net7.0\Sellify..332613C1.Up2Date
