@@ -1,11 +1,83 @@
 html,
 body {
-  font-family: 'Amazon Ember';
+  font-family: "Amazon Ember";
   width: 100%;
   height: 100%;
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
+}
+
+/*Dashboard*/
+.dashboard {
+  padding: 20px;
+  background-color: #f4f4f9;
+  min-height: 100vh;
+}
+
+.dashboard h1 {
+  color: #333;
+}
+
+/*Navbar*/
+/* .navbar {
+  background-color: #333;
+  overflow: scroll;
+} */
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: #111;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  height: 635px;
+  background: #333;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sidebar h2 {
+  color: #fff;
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar nav ul li a:hover {
+  text-decoration: underline;
 }
 
 /* Scroll Bar */
@@ -131,7 +203,7 @@ footer {
 }
 
 .rating-outer::before {
-  content: '\f006 \f006 \f006 \f006 \f006';
+  content: "\f006 \f006 \f006 \f006 \f006";
 }
 
 .rating-inner {
@@ -144,7 +216,7 @@ footer {
 }
 
 .rating-inner::before {
-  content: '\f005 \f005 \f005 \f005 \f005';
+  content: "\f005 \f005 \f005 \f005 \f005";
   color: #f80b0b;
 }
 
@@ -201,7 +273,7 @@ footer {
   padding-left: 0;
 }
 .loader:after {
-  content: ' ';
+  content: " ";
   display: block;
   width: 64px;
   height: 64px;
@@ -532,11 +604,11 @@ footer {
 }
 
 #sidebar ul li.active > a,
-a[aria-expanded='true'] {
+a[aria-expanded="true"] {
   color: #fff;
   background: #22262c;
 }
-a[data-toggle='collapse'] {
+a[data-toggle="collapse"] {
   position: relative;
 }
 .dropdown-toggle::after {
@@ -613,4 +685,22 @@ ul.CTAs a {
 .review_user {
   font-size: 0.8rem;
   color: grey;
+}
+
+.parent {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.div1 {
+  height: auto;
+}
+
+.div2 {
+  flex-grow: 1;
+}
+
+.div3 {
+  height: auto;
 }
